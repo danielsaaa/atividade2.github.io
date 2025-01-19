@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Simples</title>
+    <style>
+        :root {
+            --primary-color: #512DA8;
+            --secondary-color: #D1C4E9;
+            --text-color: #ffffff;
+            --button-hover: #673AB7;
+            --background-gradient: linear-gradient(135deg, #9575CD, #673AB7);
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: var(--background-gradient);
+            margin: 0;
+            color: var(--text-color);
+        }
+        .container {
+            text-align: center;
+            background: var(--secondary-color);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .counter {
+            font-size: 3em;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 20px 0;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
+            background: var(--primary-color);
+            color: var(--text-color);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: var(--button-hover);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Primeiro Programa</h1>
+        <p>Você pressionou esse botão esse número de vezes:</p>
+        <div class="counter" id="counter">0</div>
+        <button onclick="incrementCounter()">pressione</button>
+    </div>
+
+    <script>
+        let counter = 0;
+
+        function incrementCounter() {
+            counter++;
+            document.getElementById('counter').textContent = counter;
+        }
+    </script>
+</body>
+</html>
+
